@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace, system-ui, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  user-select: none;
+}
+
+.game-wrapper {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 850px;
+  max-width: 95vw;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.scoreboard {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 20px;
+  color: #555;
+}
+
+.scoreboard strong {
+  color: #222;
+}
+
+.canvas-container {
+  position: relative;
+  width: 100%;
+  border: 2px solid #535353;
+  border-radius: 8px;
+  background-color: #fafafa;
+  overflow: hidden;
+}
+
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+  gap: 15px;
+  transition: opacity 0.2s ease;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay h2 {
+  font-size: 1.8rem;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.overlay p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.action-btn {
+  padding: 10px 24px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  font-family: inherit;
+  color: #fff;
+  background-color: #535353;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #222;
+  transform: translateY(-2px);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+.controls-guide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.icon-btn {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.icon-btn:hover {
+  background: #e4e4e4;
+}
+

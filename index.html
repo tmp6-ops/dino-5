@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dino Runner Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="header">
+      <div class="title">🦖 Dino Runner</div>
+      <div class="scoreboard">
+        <span>HI: <strong id="high-score">00000</strong></span>
+        <span>SCORE: <strong id="score">00000</strong></span>
+      </div>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="gameCanvas" width="800" height="250"></canvas>
+      
+      <!-- Overlay Messages -->
+      <div id="start-overlay" class="overlay active">
+        <h2>Press Space or Click to Start</h2>
+        <p>Press <b>Space / Up Arrow</b> to Jump, <b>Down Arrow</b> to Duck</p>
+        <button id="start-btn" class="action-btn">Start Game</button>
+      </div>
+
+      <div id="game-over-overlay" class="overlay hidden">
+        <h2>GAME OVER</h2>
+        <p id="final-score-text">Score: 0</p>
+        <button id="restart-btn" class="action-btn">Play Again</button>
+      </div>
+    </div>
+
+    <div class="controls-guide">
+      <span>⌨️ <b>Space / ↑</b> Jump</span>
+      <span>⌨️ <b>↓</b> Duck</span>
+      <span>🔊 <b>Audio:</b> Enabled (Synthesized 8-bit sound effects)</span>
+      <button id="mute-btn" class="icon-btn" title="Toggle Sound">🔊 Sound: ON</button>
+    </div>
+  </div>
+
+  <script src="audio.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
+
